@@ -1,9 +1,3 @@
-<!--
-  Generated template for the ComptePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -11,8 +5,25 @@
   </ion-navbar>
 
 </ion-header>
+<ion-content padding class="page">
+<ion-list>
 
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
 
-<ion-content padding>
+  <ion-item>
+    <ion-label>Mot de passe</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label>Confirmer mot de passe</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <button ion-button block class="orange2" (click)="creer()">Créer compte</button>
+
+</ion-list>
 </ion-content>

@@ -6,7 +6,6 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { LoginPage } from '../pages/login/login';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { HomePage } from '../pages/home/home';
 import { ComptePage } from '../pages/compte/compte';
 
 import { StatusBar } from '@ionic-native/status-bar';
