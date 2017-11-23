@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {AccueilPage} from '../accueil/accueil';
+import { RestaurantPage } from '../restaurant/restaurant';
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the RestaurantsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import {AccueilPage} from '../accueil/accueil';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-restaurants',
+  templateUrl: 'restaurants.html',
 })
-export class LoginPage {
-  accueilPage = AccueilPage;
+export class RestaurantsPage {
+  restaurantPage = RestaurantPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad RestaurantsPage');
   }
 
 }

@@ -1,0 +1,50 @@
+<!--
+  Generated template for the RestaurantPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>restaurant</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding id="resto">
+  <img src="assets/imgs/zink.jpg" class="image"/>
+       <div class="description">
+            <h3 class="ng-scope ng-binding">Le zink	</h3>
+            <p class="ng-scope ng-binding">Il offre une cuisine américaine essentiellement et vous accompagnera pour un petit déjeuner, un brunch, un déjeuner ou un dîner.</p>
+        <div class="br"></div>
+        <h4>Adresse</h4>
+        <p>1, Rue Salah Ben Mahmoud Menzah 1, Tunis 1004, Tunisie <button class="map" ion-button block (click)="openModal()"></button></p>
+        <div class="br"></div>
+        <h4> Avis </h4>
+         <div class="note">Note totale : 4</div>
+        <ion-item class="input_note">
+          <ion-label>Notez</ion-label>
+          <ion-select [(ngModel)]="note">
+              <ion-option value="0">0</ion-option>
+              <ion-option value="1">1</ion-option>
+              <ion-option value="2">2</ion-option>
+              <ion-option value="3">3</ion-option>
+              <ion-option value="4">4</ion-option>
+              <ion-option value="5">5</ion-option>
+          </ion-select>
+        </ion-item>
+        </div>
+        <div class="br"></div>
+        <h4>Commentaires</h4>
+  <form (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>Votre commenaire</ion-label>
+        <ion-textarea name="commentaire"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" block class="add"></button>
+    </form>
+
+  <button ion-button block (click)="seeComments()" class="orange">Voir les commentaires</button>
+ 
+</ion-content>

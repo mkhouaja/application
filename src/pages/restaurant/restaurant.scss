@@ -1,0 +1,50 @@
+#resto {
+	background-color: #CECEF6;
+	.image {
+		max-height: 250px;
+    	margin: 0 auto 0;
+    	display: block;
+    	margin-top: 5%;
+	}
+	.br {
+		border: #04B431 2px solid;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.description {
+		
+		margin: 10px;
+	}
+	h4,h3 {
+		color: #DA7038;
+	}
+	p {
+		line-height: 20px;
+	}
+	.map {
+		background: url('/assets/imgs/map.ico') no-repeat; 
+		width: 50px;
+    	height: 50px;
+    	background-size: 100% 50px;	
+		margin: 15px auto 0;
+	}
+	.note {
+		font-weight: bold;
+		font-size: 26px;
+	}
+	.input_note {
+		width: 50%;		
+		margin: 10px auto 0;
+	}
+	.add {
+		background: url('/assets/imgs/add.png') no-repeat; 
+		width: 30px;
+    	height: 30px;
+    	background-size: 100% 30px;	
+		margin: 15px auto 0;
+	}
+	.orange {
+		background-color:#DA5538;
+		margin-top: 15px;
+	}
+}
