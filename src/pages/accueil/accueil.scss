@@ -9,13 +9,13 @@
 		height: 80px;
 		&.vert {
 			margin-top: 40px;
-			background:#04B431 url('/assets/imgs/plat.png') left no-repeat;
+			background:#04B431 url('../assets/imgs/plat.png') left no-repeat;
 			background-size: 60px;
     		background-position: 10px 3px;
 			text-align: left;
 		}
 		&.bleu {
-			background:#01A9DB url('/assets/imgs/cocktail.png') left no-repeat;
+			background:#01A9DB url('../assets/imgs/cocktail.png') left no-repeat;
 			margin-top: 15px;
 			background-size: 60px;
 			background-position:  15px 5px;
