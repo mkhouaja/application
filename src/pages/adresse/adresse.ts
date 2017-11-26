@@ -2,10 +2,7 @@ import {
  GoogleMaps,
  GoogleMap,
  GoogleMapsEvent,
- GoogleMapOptions,
- CameraPosition,
- MarkerOptions,
- Marker
+ GoogleMapOptions
 } from '@ionic-native/google-maps';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -24,9 +21,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AdressePage {
   map: GoogleMap;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private googleMaps: GoogleMaps) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  closeModal() {
+        this.navCtrl.pop();
+    }
   ionViewDidLoad() {
     this.loadMap();
     console.log('ionViewDidLoad AdressePage');
@@ -44,7 +43,7 @@ loadMap() {
       }
     };
 
-    this.map = this.googleMaps.create('map_canvas', mapOptions);
+    this.map = GoogleMaps.create('map_canvas', mapOptions);
 
     // Wait the MAP_READY before using any methods.
     this.map.one(GoogleMapsEvent.MAP_READY)
