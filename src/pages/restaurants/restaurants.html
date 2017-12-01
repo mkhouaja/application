@@ -12,24 +12,13 @@
 
 <ion-content padding id="restaurants">
     <h1>Liste des restaurants</h1>
-<ul class="list">
-    <li class="item item-toggle restaurant">          
-       <a class="item-content"   [navPush]="restaurantPage">
-       <img src="assets/imgs/zink.jpg" class="image"/>
-       <div class="description">
-            <h3 class="ng-scope ng-binding">Le zink	</h3>
-            <p class="ng-scope ng-binding">Il offre une cuisine américaine essentiellement et vous accompagnera pour un petit déjeuner, un brunch, un déjeuner ou un dîner.</p>
-        </div>
-        </a>
-    </li>
-    <li class="item item-toggle restaurant">          
-       <a class="item-content"  >
-       <img src="assets/imgs/planb.jpg" class="image"/>
-       <div class="description">
-            <h3 class="ng-scope ng-binding">Plan B</h3>
-            <p class="ng-scope ng-binding">La franchise Plan B est un réseau d'enseignes de restauration rapide</p>
-        </div>
-        </a>
-    </li>
-</ul>
+    <ul class="list"> 
+        <li class="item item-toggle restaurant" *ngFor="let fiche of fiches" (click)="selectFiche($event, fiche.id)">          
+            <img src="{{fiche.url_image}}" class="image"/>
+            <div class="description">
+                <h3 class="ng-scope ng-binding">{{fiche.nom}}</h3>
+                <p class="ng-scope ng-binding">{{fiche.decription}}</p>
+            </div>
+        </li>
+    </ul>
 </ion-content>

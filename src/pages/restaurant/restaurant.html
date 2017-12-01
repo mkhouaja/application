@@ -9,17 +9,17 @@
 
 </ion-header>
 
-<ion-content padding id="resto">
-  <img src="assets/imgs/zink.jpg" class="image"/>
+<ion-content padding id="resto" *ngFor="let fiche of fiche">
+  <img src="{{fiche.url_image}}" class="image"/>
        <div class="description">
-            <h3 class="ng-scope ng-binding">Le zink	</h3>
-            <p class="ng-scope ng-binding">Il offre une cuisine américaine essentiellement et vous accompagnera pour un petit déjeuner, un brunch, un déjeuner ou un dîner.</p>
+            <h3 class="ng-scope ng-binding">{{fiche.nom}}</h3>
+            <p class="ng-scope ng-binding">{{fiche.decription}}</p>
         <div class="br"></div>
         <h4>Adresse</h4>
-        <p>1, Rue Salah Ben Mahmoud Menzah 1, Tunis 1004, Tunisie <button class="map" ion-button block (click)="openModal()"></button></p>
+        <p>{{fiche.adresse}}<button class="map" ion-button block (click)="openModal()"></button></p>
         <div class="br"></div>
         <h4> Avis </h4>
-         <div class="note">Note totale : 4</div>
+         <div class="note">Note totale : {{fiche.note_finale}}</div>
         <ion-item class="input_note">
           <ion-label>Notez</ion-label>
           <ion-select [(ngModel)]="note">
@@ -34,7 +34,7 @@
         </div>
         <div class="br"></div>
         <h4>Commentaires</h4>
-  <form (ngSubmit)="logForm()">
+  <form (ngSubmit)="commentaireForm()">
       <ion-item>
         <ion-label>Votre commenaire</ion-label>
         <ion-textarea name="commentaire"></ion-textarea>
@@ -42,6 +42,6 @@
       <button ion-button type="submit" block class="add"></button>
     </form>
 
-  <button ion-button block (click)="seeComments()" class="orange">Voir les commentaires</button>
+  <button ion-button block (click)="seeComments(fiche.id)" class="orange">Voir les commentaires</button>
  
 </ion-content>

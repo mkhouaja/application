@@ -15,16 +15,10 @@
 
 <ion-content padding>
 <ul class="list">
-    <li class="item item-toggle commentaire">          
+    <li class="item item-toggle commentaire" *ngFor="let commentaire of commentaires">          
        <div class="description">
-            <h3 class="ng-scope ng-binding">Date : 23/11/2017</h3>
-            <p class="ng-scope ng-binding">Excellent !!!</p>
-        </div>
-    </li>
-    <li class="item item-toggle commentaire">          
-       <div class="description">
-            <h3 class="ng-scope ng-binding">Date : 18/11/2017	</h3>
-            <p class="ng-scope ng-binding">Trés bon</p>
+            <h3 class="ng-scope ng-binding"></h3>
+            <p class="ng-scope ng-binding">{{commentaire.commentaire}}</p>
         </div>
     </li>
 </ul>

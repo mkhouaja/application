@@ -11,6 +11,7 @@
 
 <ion-content padding id="categories">
   <h1>Choisissez une catégorie</h1>
-  <button ion-button block class="bleu" (click)="login()">Salons de thé</button>
-  <button ion-button block class="vert" [navPush]="restaurantsPage">Restaurants</button>
+   <ion-item *ngFor="let categorie of categories" (click)="selectFiches($event, categorie.id)">
+        <button ion-button block class="cat{{categorie.id}}">{{categorie.nom}}</button>
+    </ion-item>
 </ion-content>

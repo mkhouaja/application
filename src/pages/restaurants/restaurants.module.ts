@@ -9,5 +9,8 @@ import { RestaurantsPage } from './restaurants';
   imports: [
     IonicPageModule.forChild(RestaurantsPage),
   ],
+  entryComponents: [
+    RestaurantsPage,
+  ]
 })
 export class RestaurantsPageModule {}
