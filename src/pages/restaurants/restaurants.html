@@ -12,6 +12,7 @@
 
 <ion-content padding id="restaurants">
     <h1>Liste des restaurants</h1>
+    <span *ngIf="fiches == 0">Aucune fiche.</span>    
     <ul class="list"> 
         <li class="item item-toggle restaurant" *ngFor="let fiche of fiches" (click)="selectFiche($event, fiche.id)">          
             <img src="{{fiche.url_image}}" class="image"/>
