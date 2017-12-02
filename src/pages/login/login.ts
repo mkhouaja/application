@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {AccueilPage} from '../accueil/accueil';
+import { RestProvider } from '../../providers/rest/rest';
 /**
  * Generated class for the LoginPage page.
  *
@@ -15,9 +16,26 @@ import {AccueilPage} from '../accueil/accueil';
 })
 export class LoginPage {
   accueilPage = AccueilPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  pushPage:any;
+  erreurMsg:any;
+  user = {email: '', password: ''};
+  constructor(public navCtrl: NavController, public navParams: NavParams,public rest: RestProvider) {
   }
+login() {
+    this.rest.login(this.user).then((result) => {
 
+      if(result == "ko"){
+        this.erreurMsg = "Vérifiez vos identifiants";
+      }
+      else {
+        this.erreurMsg = "";
+        localStorage.setItem('user', result);
+        this.pushPage = AccueilPage;
+      }
+  }, (err) => {
+    console.log(err);
+  });
+}
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }

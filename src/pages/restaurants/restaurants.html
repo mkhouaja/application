@@ -4,14 +4,14 @@
     <button ion-button icon-only menuToggle>
             <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Restaurants</ion-title>
+    <ion-title>Liste des " {{categorieName}} "</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding id="restaurants">
-    <h1>Liste des restaurants</h1>
+    <h1>Liste des " {{categorieName}} "</h1>
     <span *ngIf="fiches == 0">Aucune fiche.</span>    
     <ul class="list"> 
         <li class="item item-toggle restaurant" *ngFor="let fiche of fiches" (click)="selectFiche($event, fiche.id)">          

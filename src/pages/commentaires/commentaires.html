@@ -18,8 +18,9 @@
         <span *ngIf="commentaires == 0">Aucun commentaire.</span>    
         <li class="item item-toggle commentaire" *ngFor="let commentaire of commentaires"> 
            <div class="description">    
-                <h3 class="ng-scope ng-binding">Date : {{commentaire.date}}</h3>
-                <p class="ng-scope ng-binding">{{commentaire.commentaire}}</p>
+                <h3 class="ng-scope ng-binding">{{commentaire.commentaire}}</h3>
+                <p class="ng-scope ng-binding">Date : {{commentaire.date}} </p>
+                <p class="ng-scope ng-binding">Par : {{commentaire.pseudo}}</p>
             </div>
         </li>
     </ul>

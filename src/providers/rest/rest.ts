@@ -58,4 +58,54 @@ getCommentaires(id_fiche: any) {
     });
   });
 }
+getCategorie(categorie: any) {
+   var url ='http://127.0.0.1:8000/api/categorie/'+categorie;
+    return new Promise(resolve => {
+    this.http.get(url).subscribe(data => {
+      resolve(data);
+    }, err => {
+      console.log(err);
+    });
+  });
+}
+addCommentaire(data) {
+  return new Promise((resolve, reject) => {
+    this.http.post('http://127.0.0.1:8000/api/commentaire/ajout', JSON.stringify(data))
+      .subscribe(res => {
+        resolve(res);
+      }, (err) => {
+        reject(err);
+      });
+  });
+}
+addNote(data) {
+  return new Promise((resolve, reject) => {
+    this.http.post('http://127.0.0.1:8000/api/note/ajout', JSON.stringify(data))
+      .subscribe(res => {
+        resolve(res);
+      }, (err) => {
+        reject(err);
+      });
+  });
+}
+addUtilisateur(data) {
+  return new Promise((resolve, reject) => {
+    this.http.post('http://127.0.0.1:8000/api/utilisateur/ajout', JSON.stringify(data))
+      .subscribe(res => {
+        resolve(res);
+      }, (err) => {
+        reject(err);
+      });
+  });
+}
+login(data) {
+  return new Promise((resolve, reject) => {
+    this.http.post('http://127.0.0.1:8000/api/utilisateur/login', JSON.stringify(data))
+      .subscribe(res => {
+        resolve(res);
+      }, (err) => {
+        reject(err);
+      });
+  });
+}
 }

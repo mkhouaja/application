@@ -18,15 +18,24 @@ export class RestaurantsPage {
   restaurantPage = RestaurantPage;
   categorie: any; 
   fiches: any; 
+ categorieName: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public rest: RestProvider) {
     this.categorie = navParams.get('categorie');   
     this.getFiches(this.categorie);
+    this.getCategorie(this.categorie);
   }
   getFiches(categorie) {
     this.rest.getFiches(categorie)
     .then(data => {
       this.fiches = data;
     });
+  }
+ getCategorie(categorie) {
+    this.rest.getCategorie(this.categorie).then((result) => {
+        this.categorieName = result;
+  }, (err) => {
+    console.log(err);
+  });
   }
   selectFiche(event,id_fiche) {  
         this.navCtrl.push(RestaurantPage, {

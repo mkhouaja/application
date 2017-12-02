@@ -27,7 +27,6 @@ export class CommentairesPage {
     this.rest.getCommentaires(id_fiche)
     .then(data => {
       this.commentaires = data;
-      console.log(data);
     });
   }
   ionViewDidLoad() {

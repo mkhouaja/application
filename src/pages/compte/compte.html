@@ -6,25 +6,26 @@
 </ion-header>
 <ion-content padding class="page">
 
-<ion-list class="form">
+<form (ngSubmit)="addUtilisateur()">
 
   <ion-item>
     <ion-label>Email</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-input type="text" [(ngModel)]="user.email" name="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label>Pseudo</ion-label>
+    <ion-input type="pseudo" [(ngModel)]="user.pseudo" name="pseudo"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Mot de passe</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label>Confirmer mot de passe</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
+  
+  <button ion-button block class="orange2" type="submit" [navPush]="pushPage">Créer compte</button>
 
-  <button ion-button block class="orange2">Créer compte</button>
-
-
-</ion-list>
+</form>
+<p class="error">{{error}}</p>
 </ion-content>

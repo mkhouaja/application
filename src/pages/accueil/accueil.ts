@@ -29,9 +29,6 @@ export class AccueilPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public rest: RestProvider) {
     this.getCategories();
-    this.pages = [
-      { title: 'Compte', component: ComptePage }
-    ];
   }
   
   getCategories() {
@@ -45,13 +42,6 @@ export class AccueilPage {
             categorie: categorie
         });
     }    
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
-  }
-  
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccueilPage');
   }
