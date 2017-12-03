@@ -29,7 +29,7 @@ login() {
       }
       else {
         this.erreurMsg = "";
-        localStorage.setItem('user', result);
+        localStorage.setItem('user', JSON.stringify(result));
         this.pushPage = AccueilPage;
       }
   }, (err) => {

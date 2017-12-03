@@ -1,6 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component} from '@angular/core';
+import { Platform } from 'ionic-angular';
+import { IonicPage} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {LoginPage} from '../login/login';
@@ -18,18 +18,13 @@ import {ComptePage} from '../compte/compte';
   templateUrl: 'welcome.html',
 })
 export class WelcomePage {
-  @ViewChild(Nav) nav: Nav;
+
   pages: Array<{title: string, component: any}>;
   loginPage = LoginPage;
   comptePage = ComptePage;
-constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: LoginPage },
-      { title: 'List', component: ComptePage }
-    ];
-
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+      localStorage.setItem('user', "");
+      console.log(localStorage.getItem('user'));
   }
 
   ionViewDidLoad() {

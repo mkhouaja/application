@@ -36,7 +36,7 @@ export class ComptePage {
       }
       else {
         this.error="";  
-        localStorage.setItem('user', result);
+        localStorage.setItem('user', JSON.stringify(result));
         this.pushPage = AccueilPage;
       }
       

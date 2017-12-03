@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav} from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ComptePage } from '../compte/compte';
 import { RestaurantsPage } from '../restaurants/restaurants';
 import { RestProvider } from '../../providers/rest/rest';
 /**
