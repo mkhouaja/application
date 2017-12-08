@@ -24,7 +24,6 @@ export class WelcomePage {
   comptePage = ComptePage;
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
       localStorage.setItem('user', "");
-      console.log(localStorage.getItem('user'));
   }
 
   ionViewDidLoad() {

@@ -18,6 +18,7 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class RestaurantPage {
   id_fiche: any; 
+  id_adresse: any;
   fiche: any;
   commentaire = { texte: '', id_fiche: '', id_utilisateur: ''};
   note = { note: '', id_fiche: '', id_utilisateur: ''};
@@ -27,8 +28,8 @@ export class RestaurantPage {
    
     
   }
-  openModal() {
-    let myModal = this.modalCtrl.create(AdressePage);
+  openModal(id_adresse) {
+    let myModal = this.modalCtrl.create(AdressePage,{ id_adresse: id_adresse});
     myModal.present();
   }
   seeComments(id_fiche) {
@@ -51,7 +52,7 @@ export class RestaurantPage {
     this.note.id_fiche = this.id_fiche;
     this.note.id_utilisateur = localStorage.getItem('user');
     this.rest.addNote(this.note).then((result) => {
-        this.getFiche(this.note.id_fiche);
+    this.getFiche(this.note.id_fiche);
   }, (err) => {
     console.log(err);
   });

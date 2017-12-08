@@ -1,7 +1,6 @@
 #categories {
 	h1 {
 		margin-top: 10%;
-		margin-bottom: 10%;
 		color: #DA5538;
 	}
 	button {
@@ -10,7 +9,7 @@
 		text-transform: uppercase;
 		color: #fff;
 		&.cat3 {
-			margin-top: 40px;
+			margin-top: 10px;
 			background:#04B431 url('../assets/imgs/plat.png') left no-repeat;
 			background-size: 60px;
     		background-position: 10px 3px;
@@ -18,7 +17,7 @@
 		}
 		&.cat4 {
 			background:#01A9DB url('../assets/imgs/cocktail.png') left no-repeat;
-			margin-top: 15px;
+			margin-top: 10px;
 			background-size: 60px;
 			background-position:  15px 5px;
 			text-align: left;

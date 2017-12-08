@@ -16,7 +16,7 @@
             <p class="ng-scope ng-binding">{{fiche.decription}}</p>
         <div class="br"></div>
         <h4>Adresse</h4>
-        <p>{{fiche.adresse}}<button class="map" ion-button block (click)="openModal()"></button></p>
+        <p>{{fiche.adresse}}<button class="map" ion-button block (click)="openModal(fiche.id_adresse)"></button></p>
         <div class="br"></div>
         <h4> Avis </h4>
          <div class="note">Note totale : {{fiche.note_finale}}</div>

@@ -20,7 +20,7 @@ export class RestProvider {
   
   getCategories() {
     return new Promise(resolve => {
-    this.http.get('http://127.0.0.1:8000/api/categories-list').subscribe(data => {
+    this.http.get('http://pfe.manel-khouaja.com/api/categories-list').subscribe(data => {
       resolve(data);
     }, err => {
       console.log(err);
@@ -28,7 +28,7 @@ export class RestProvider {
   });
 }
   getFiches(categorie: any) {
-   var url ='http://127.0.0.1:8000/api/fiches-list/'+categorie;
+   var url ='http://pfe.manel-khouaja.com/api/fiches-list/'+categorie;
     return new Promise(resolve => {
     this.http.get(url).subscribe(data => {
       resolve(data);
@@ -39,7 +39,7 @@ export class RestProvider {
   }
   
   getFiche(id_fiche: any) {
-   var url ='http://127.0.0.1:8000/api/fiche/'+id_fiche;
+   var url ='http://pfe.manel-khouaja.com/api/fiche/'+id_fiche;
     return new Promise(resolve => {
     this.http.get(url).subscribe(data => {
       resolve(data);
@@ -49,7 +49,7 @@ export class RestProvider {
   });
 }
 getCommentaires(id_fiche: any) {
-   var url ='http://127.0.0.1:8000/api/commentaires/'+id_fiche;
+   var url ='http://pfe.manel-khouaja.com/api/commentaires/'+id_fiche;
     return new Promise(resolve => {
     this.http.get(url).subscribe(data => {
       resolve(data);
@@ -59,7 +59,17 @@ getCommentaires(id_fiche: any) {
   });
 }
 getCategorie(categorie: any) {
-   var url ='http://127.0.0.1:8000/api/categorie/'+categorie;
+   var url ='http://pfe.manel-khouaja.com/api/categorie/'+categorie;
+    return new Promise(resolve => {
+    this.http.get(url).subscribe(data => {
+      resolve(data);
+    }, err => {
+      console.log(err);
+    });
+  });
+}
+getAdresse(adresse: any) {
+   var url ='http://pfe.manel-khouaja.com/api/adresse/'+adresse;
     return new Promise(resolve => {
     this.http.get(url).subscribe(data => {
       resolve(data);
@@ -70,7 +80,7 @@ getCategorie(categorie: any) {
 }
 addCommentaire(data) {
   return new Promise((resolve, reject) => {
-    this.http.post('http://127.0.0.1:8000/api/commentaire/ajout', JSON.stringify(data))
+    this.http.post('http://pfe.manel-khouaja.com/api/commentaire/ajout', JSON.stringify(data))
       .subscribe(res => {
         resolve(res);
       }, (err) => {
@@ -80,7 +90,7 @@ addCommentaire(data) {
 }
 addNote(data) {
   return new Promise((resolve, reject) => {
-    this.http.post('http://127.0.0.1:8000/api/note/ajout', JSON.stringify(data))
+    this.http.post('http://pfe.manel-khouaja.com/api/note/ajout', JSON.stringify(data))
       .subscribe(res => {
         resolve(res);
       }, (err) => {
@@ -90,7 +100,7 @@ addNote(data) {
 }
 addUtilisateur(data) {
   return new Promise((resolve, reject) => {
-    this.http.post('http://127.0.0.1:8000/api/utilisateur/ajout', JSON.stringify(data))
+    this.http.post('http://pfe.manel-khouaja.com/api/utilisateur/ajout', JSON.stringify(data))
       .subscribe(res => {
         resolve(res);
       }, (err) => {
@@ -100,7 +110,7 @@ addUtilisateur(data) {
 }
 login(data) {
   return new Promise((resolve, reject) => {
-    this.http.post('http://127.0.0.1:8000/api/utilisateur/login', JSON.stringify(data))
+    this.http.post('http://pfe.manel-khouaja.com/api/utilisateur/login', JSON.stringify(data))
       .subscribe(res => {
         resolve(res);
       }, (err) => {

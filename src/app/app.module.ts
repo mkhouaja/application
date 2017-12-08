@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { GoogleMaps } from '@ionic-native/google-maps';
+import { Fcm } from '@ionic-native/fcm';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
@@ -50,7 +50,7 @@ import { RestProvider } from '../providers/rest/rest';
   providers: [
     StatusBar,
     SplashScreen,
-    GoogleMaps,
+    Fcm,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider
   ]

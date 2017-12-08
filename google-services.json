@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "577328583141",
+    "firebase_url": "https://sortie-gourmande-1511468554512.firebaseio.com",
+    "project_id": "sortie-gourmande-1511468554512",
+    "storage_bucket": "sortie-gourmande-1511468554512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577328583141:android:08040141ed7a92d7",
+        "android_client_info": {
+          "package_name": "com.gourmand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577328583141-70a8e05igiuokra6t003bbbkk5neuudq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkZ3XnHSX4OPLH28TNCd133rm01cvqPns"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
