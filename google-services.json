@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:577328583141:android:08040141ed7a92d7",
         "android_client_info": {
-          "package_name": "com.gourmand"
+          "package_name": "io.ionic.starter"
         }
       },
       "oauth_client": [
@@ -21,7 +21,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDkZ3XnHSX4OPLH28TNCd133rm01cvqPns"
+          "current_key": "AIzaSyDzFwpcvhrZknmiobmCTBdJF0hxlhlnmYE"
         }
       ],
       "services": {

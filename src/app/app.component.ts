@@ -3,7 +3,6 @@ import {Platform,Nav } from 'ionic-angular';
 
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AccueilPage } from '../pages/accueil/accueil';
-declare var FCMPlugin;
 @Component({
   templateUrl: 'app.html'
 })

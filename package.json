@@ -30,7 +30,6 @@
     "cordova-android": "6.3.0",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-fcm": "^2.1.2",
-    "cordova-plugin-googlemaps": "^2.1.1",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-splashscreen": "^4.0.3",
     "cordova-plugin-whitelist": "^1.3.1",
@@ -52,11 +51,10 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-googlemaps": {
-        "API_KEY_FOR_ANDROID": "AIzaSyDzFwpcvhrZknmiobmCTBdJF0hxlhlnmYE"
-      },
-      "cordova-plugin-fcm": {}
-    }
+      "cordova-plugin-ionic-webview": {}
+    },
+    "platforms": [
+      "android"
+    ]
   }
 }

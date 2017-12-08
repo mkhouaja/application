@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component,ElementRef,ViewChild  } from '@angular/core';
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 /**
  * Generated class for the AdressePage page.
@@ -7,14 +7,17 @@ import { RestProvider } from '../../providers/rest/rest';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
+declare var google; 
 @IonicPage()
 @Component({
   selector: 'page-adresse',
   templateUrl: 'adresse.html',
 })
 export class AdressePage {
+  @ViewChild('map') mapElement: ElementRef;
   adresse: any;
+  map: any;
+  marqueur: any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public rest: RestProvider) {   
   }
   closeModal() {
@@ -27,29 +30,19 @@ export class AdressePage {
   }
   initializeMap(adresse) { 
     
-    let locationOptions = {timeout: 20000, enableHighAccuracy: true};
-    navigator.geolocation.getCurrentPosition(
- 
-        (position) => {
- 
-            let options = {
-              center: new google.maps.LatLng(adresse.latitude, adresse.longitude),
-              zoom: 16,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
- 
-           this.map = new google.maps.Map(document.getElementById("map_canvas"), options);
-           let optionsMarqueur = {
-	               position: this.map.getCenter(),
-	               map: this.map
-            };
-            this.marqueur = new google.maps.Marker(optionsMarqueur);
-        },
- 
-        (error) => {
-            console.log(error);
-        }, locationOptions
-    );
+    let pos = { lat: parseFloat(adresse.latitude), lng: parseFloat(adresse.longitude)}
+    this.map = new google.maps.Map(this.mapElement.nativeElement, {
+        zoom: 16,
+        center: pos,
+        mapTypeId: 'roadmap'
+    });
+    this.map.setCenter(pos);
+         let optionsMarqueur = {
+	           position: this.map.getCenter(),
+	           map: this.map
+         };
+    this.marqueur = new google.maps.Marker(optionsMarqueur);
+       
 }
 getAdresse(adresse) {
     this.rest.getAdresse(adresse)
@@ -59,5 +52,4 @@ getAdresse(adresse) {
       
     });
   }
-
 }
