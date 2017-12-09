@@ -22,7 +22,7 @@ export class ComptePage {
   }
  //Add utilisateur 
   addUtilisateur() {
-    this.user.device ="HKDKDEEE5E5E5E5E5E";
+    this.user.device = localStorage.getItem("device");
     this.rest.addUtilisateur(this.user).then((result) => {
       
       if(result=="pseudo") {

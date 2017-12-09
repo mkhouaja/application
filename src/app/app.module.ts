@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { RestProvider } from '../providers/rest/rest';
+import { Push } from '@ionic-native/push';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { RestProvider } from '../providers/rest/rest';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    Push
   ]
 })
 export class AppModule {}
