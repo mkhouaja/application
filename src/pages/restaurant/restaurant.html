@@ -10,7 +10,11 @@
 </ion-header>
 
 <ion-content padding id="resto" *ngFor="let fiche of fiche">
-  <img src="{{fiche.url_image}}" class="image"/>
+    <ion-slides>
+      <ion-slide *ngFor="let images of fiche.images">
+        <img src="{{images.image}}" class="image"/>
+      </ion-slide>
+    </ion-slides>
        <div class="description">
             <h3 class="ng-scope ng-binding">{{fiche.nom}}</h3>
             <p class="ng-scope ng-binding">{{fiche.decription}}</p>

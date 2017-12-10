@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { AdressePage } from '../adresse/adresse';
 import { CommentairesPage } from '../commentaires/commentaires';
@@ -22,11 +22,14 @@ export class RestaurantPage {
   fiche: any;
   commentaire = { texte: '', id_fiche: '', id_utilisateur: ''};
   note = { note: '', id_fiche: '', id_utilisateur: ''};
+  @ViewChild(Slides) slides: Slides;
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController,public rest: RestProvider) {
     this.id_fiche = navParams.get('id_fiche');
-    this.getFiche(this.id_fiche);
-   
+    this.getFiche(this.id_fiche);  
     
+  }
+  goToSlide() {
+    this.slides.slideTo(2, 500);
   }
   openModal(id_adresse) {
     let myModal = this.modalCtrl.create(AdressePage,{ id_adresse: id_adresse});
