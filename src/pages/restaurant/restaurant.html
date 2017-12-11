@@ -4,12 +4,12 @@
     <button ion-button icon-only menuToggle>
             <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Détails</ion-title>
+    <ion-title *ngFor="let fiche of fiche">{{fiche.nom}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding id="resto" *ngFor="let fiche of fiche">
+<ion-content padding id="resto"  *ngFor="let fiche of fiche">
     <ion-slides>
       <ion-slide *ngFor="let images of fiche.images">
         <img src="{{images.image}}" class="image"/>
@@ -17,7 +17,7 @@
     </ion-slides>
        <div class="description">
             <h3 class="ng-scope ng-binding">{{fiche.nom}}</h3>
-            <p class="ng-scope ng-binding">{{fiche.decription}}</p>
+            <p class="ng-scope ng-binding">{{fiche.description}}</p>
         <div class="br"></div>
         <h4>Adresse</h4>
         <p>{{fiche.adresse}}<button class="map" ion-button block (click)="openModal(fiche.id_adresse)"></button></p>

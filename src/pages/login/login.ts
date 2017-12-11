@@ -29,8 +29,8 @@ login() {
       }
       else {
         this.erreurMsg = "";
-        localStorage.setItem('user', JSON.stringify(result));
-        this.pushPage = AccueilPage;
+        localStorage.setItem('user', JSON.stringify(result));   
+        this.navCtrl.push(AccueilPage);
       }
   }, (err) => {
     console.log(err);

@@ -37,7 +37,7 @@ export class ComptePage {
       else {
         this.error="";  
         localStorage.setItem('user', JSON.stringify(result));
-        this.pushPage = AccueilPage;
+        this.navCtrl.push(AccueilPage);
       }
       
   }, (err) => {

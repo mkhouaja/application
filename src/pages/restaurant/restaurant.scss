@@ -1,9 +1,9 @@
 #resto {
 	.image {
-		max-height: 250px;
+		max-height: 150px;
     	margin: 0 auto 0;
     	display: block;
-    	margin-top: 5%;
+		width: 100%;
 	}
 	.br {
 		border: #04B431 2px solid;
@@ -22,14 +22,14 @@
 	}
 	.map {
 		background: url('../assets/imgs/map.ico') no-repeat; 
-		width: 50px;
-    	height: 50px;
-    	background-size: 100% 50px;	
+		width: 25px;
+    	height: 30px;
+    	background-size: 100% 30px;	
 		margin: 15px auto 0;
 	}
 	.note {
 		font-weight: bold;
-		font-size: 26px;
+		font-size: 20px;
 	}
 	.input_note {
 		width: 50%;		
@@ -37,13 +37,17 @@
 	}
 	.add {
 		background: url('../assets/imgs/add.png') no-repeat; 
-		width: 30px;
-    	height: 30px;
-    	background-size: 100% 30px;	
+		width: 20px;
+    	height: 25px;
+    	background-size: 100% 25px;	
 		margin: 15px auto 0;
 	}
 	.orange {
 		background-color:#DA5538;
 		margin-top: 15px;
 	}
+}
+ion-slides {
+	max-height: 150px;
+    margin-top: 80px;
 }
